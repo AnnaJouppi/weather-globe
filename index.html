@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Weather Globe App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Heading -->
+  <div id="globe-weather-div">
+    <h1 >Globe Weather</h1>
+  </div>
+    <div id="globe-container"></div>
+
+    <!-- Weather Search -->
+    <form id="weather-form">
+        <input type="text" id="location-input" placeholder="Search for a location" required>
+        <button id="weather-form-btn" class="weather-form-btn-day" type="submit">Search</button>
+    </form>
+
+    <div id="loading-message" class="hidden">Loading weather data...</div>
+
+    <!-- Weather output -->
+     <!-- Weather card -->
+    <div id="weather-output" class="weather-card hidden">
+  <div class="weather-location">
+    <div id="region-line"></div>
+    <div id="country-line"></div>
+    <div id="local-time"></div>
+  </div>
+
+  <div class="weather-main">
+    <img id="weather-icon" alt="weather icon">
+    <div class="weather-temp-info">
+      <div id="temperature" class="main-temp"></div>
+      <div id="condition"></div>
+      <div id="feels-like"></div>
+    </div>
+  </div>
+
+  <div class="weather-details">
+    <div>Wind <span id="wind"></span></div>
+    <div>Humidity <span id="humidity"></span></div>
+    <div>Visibility <span id="visibility"></span></div>
+    <div>Pressure <span id="pressure"></span></div>
+    <div>Dew Point <span id="dew-point"></span></div>
+    <div>UV Index <span id="uv"></span></div>
+  </div>
+  
+  <!-- Info button and modal -->
+</div>
+
+<i class="fa-solid fa-circle-info" id="info-icon"></i>
+
+<div class="info-modal hidden" id="info-modal">
+  <div class="info-modal-content">
+<h3>Credits</h3>
+<ul>
+  <li>Weather Data By: <a href="https://www.weatherapi.com/">WeatherAPI</a></li>
+  <li><a target="_blank" href="https://icons8.com/icon/77/info">Info</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
+</ul>
+  <button id="close-info-btn">X</button>
+  </div>
+</div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
