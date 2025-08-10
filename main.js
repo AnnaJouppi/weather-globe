@@ -112,7 +112,6 @@ function animate(){
 animate();
 
 /******************** 5. WEATHER API + UI ********************/
-const API_KEY = 'ce6b5716bb1e4928bed73856222303'; // <-- replace
 const form  = document.getElementById('weather-form');
 const loading = document.getElementById('loading-message');
 const card    = document.getElementById('weather-output');
