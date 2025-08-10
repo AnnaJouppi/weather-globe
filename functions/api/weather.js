@@ -2,7 +2,6 @@ export async function onRequestGet(context) {
     const { request, env } = context;
     const url = new URL(request.url);
     const location = url.searchParams.get('q');
-}
 
 if (!location) {
         return new Response('Location query parameter "q" is required.', {
@@ -26,9 +25,7 @@ if (!location) {
         );
     } catch (error) {
         return new Response('Error fetching weather data.', {
-            status: 500,
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            status: 500,     
         });
     }
+}
