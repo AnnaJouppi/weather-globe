@@ -21,8 +21,7 @@ if (!location) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
             },
-             }
-        );
+    });
     } catch (error) {
         return new Response('Error fetching weather data.', {
             status: 500,     
