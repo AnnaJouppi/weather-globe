@@ -125,7 +125,7 @@ function uvColor(uv) {
   if (uv <= 2) return '#00FF00'; // Low
   if (uv <= 5) return '#FFFF00'; // Moderate
   if (uv >= 7 && uv < 8) return 'rgba(255, 165, 0, 0.5)'; // High
-  if (uv <= 8 && uv < 11 ) return '#D94C4C'; // Very High
+  if (uv >= 8 && uv < 11 ) return '#D94C4C'; // Very High
   if (uv >= 11) return '#6F428B'; // Extreme
 }
 
@@ -231,6 +231,13 @@ form.addEventListener('submit', async (e)=>{
     // UV index pulses, if high
      uv.style.backgroundColor = uvColor(data.current.uv);
     
+       if (data.current.uv <= 2) {
+  uv.classList.add('uv-low');
+}
+else {
+  uv.classList.remove('uv-low');
+}
+
   if (data.current.uv >= 7 && data.current.uv < 8) {
   uv.classList.add('pulse-uv-orange')
 } else {

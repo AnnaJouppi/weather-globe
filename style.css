@@ -267,6 +267,10 @@ input::placeholder {
   color: #fff;
 }
 
+.uv-low {
+  color: #333;
+}
+
 #uv {
     display: inline-block;
     padding: 0.2rem 0.5rem;
